@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: If you use this software, please cite it as below.
-title: Sparse Feature Correspondence Between Language Models and fMRI
+title: "Can We Detect Shared Features Between Language Models and the Brain? Code and reproducibility materials"
 type: software
 version: 0.1.4
 date-released: 2026-09-04
