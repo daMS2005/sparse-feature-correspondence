@@ -1,0 +1,206 @@
+{
+  "analysis_role": "completed_two_family_power_summary",
+  "claim_boundary": {
+    "allowed": "No reproducible correspondence was established; the completed grid shows that moderate correspondence remains unresolved.",
+    "forbidden": "The data establish that sparse-feature correspondence is absent."
+  },
+  "decision_rule": {
+    "configured_detectability_criterion_met": false,
+    "configured_reference_oracle_correlation": 0.4,
+    "coverage_complete": true,
+    "identifiability_threshold": 0.8,
+    "interpretation": "bounded_non_detection_underidentified"
+  },
+  "families": {
+    "gemma_2_2b": {
+      "by_oracle_correlation": {
+        "0.0": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.05,
+          "mean": 0.05,
+          "minimum": 0.05
+        },
+        "0.2": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.18,
+          "mean": 0.128,
+          "minimum": 0.104
+        },
+        "0.4": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.352,
+          "mean": 0.28975,
+          "minimum": 0.22
+        },
+        "0.6": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.68,
+          "mean": 0.576,
+          "minimum": 0.5
+        },
+        "0.8": {
+          "cells_at_or_above_0.80": 14,
+          "maximum": 0.924,
+          "mean": 0.85475,
+          "minimum": 0.724
+        }
+      },
+      "cells": 80,
+      "cells_at_or_above_0.80": 14,
+      "configured_rho_0.40_threshold_met": false,
+      "maximum_detection_fraction": 0.924
+    },
+    "llama_3_1_8b": {
+      "by_oracle_correlation": {
+        "0.0": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.05,
+          "mean": 0.05,
+          "minimum": 0.05
+        },
+        "0.2": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.12,
+          "mean": 0.083,
+          "minimum": 0.056
+        },
+        "0.4": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.248,
+          "mean": 0.17475,
+          "minimum": 0.096
+        },
+        "0.6": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.492,
+          "mean": 0.331,
+          "minimum": 0.188
+        },
+        "0.8": {
+          "cells_at_or_above_0.80": 0,
+          "maximum": 0.776,
+          "mean": 0.58775,
+          "minimum": 0.304
+        }
+      },
+      "cells": 80,
+      "cells_at_or_above_0.80": 0,
+      "configured_rho_0.40_threshold_met": false,
+      "maximum_detection_fraction": 0.776
+    }
+  },
+  "generator_sha256": "8ca6edb4a91eaa06f90fdc30664627b163341b82c55a47bebfd49811d56545c9",
+  "grid": {
+    "cells": 160,
+    "designs": 8,
+    "models": [
+      "gemma_2_2b",
+      "llama_3_1_8b"
+    ],
+    "null_replicates_per_cell": 500,
+    "oracle_correlations": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "positive_replicates_per_cell": 250,
+    "residual_scale_multipliers": [
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "shards": 256
+  },
+  "rho_zero_realized_detection_fraction": {
+    "cells": 32,
+    "maximum": 0.05,
+    "mean": 0.05,
+    "minimum": 0.05
+  },
+  "schema_version": 1,
+  "source_aggregates": [
+    {
+      "aggregate_file": "power_gemma_2_2b_source_story_correlation_pruned_shapesphysical_to_shapessocial.json",
+      "aggregate_sha256": "3d1f984bcf6262354a9d662436cb39712580fe0b73f2d4ae815db818bbcd40c6",
+      "bank_type": "source_story_correlation_pruned",
+      "design_label": "gemma_2_2b/source_story_correlation_pruned/shapesphysical_to_shapessocial",
+      "design_sha256": "1baebd1949db18affc916a11b5ff4b7129b32e1b8991fedee8ae6ea2a3874be1",
+      "direction": "shapesphysical_to_shapessocial",
+      "model": "gemma_2_2b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_gemma_2_2b_source_story_correlation_pruned_shapessocial_to_shapesphysical.json",
+      "aggregate_sha256": "82215fb41c020960d2e4c957030f36ea23aa6bb322d32ea3b89e7124da4936c3",
+      "bank_type": "source_story_correlation_pruned",
+      "design_label": "gemma_2_2b/source_story_correlation_pruned/shapessocial_to_shapesphysical",
+      "design_sha256": "e34fdae67b6b32ccae3649e48d396bc344e6824a8972a0ca93ed626dfb1ed8ef",
+      "direction": "shapessocial_to_shapesphysical",
+      "model": "gemma_2_2b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_gemma_2_2b_source_story_variance_shapesphysical_to_shapessocial.json",
+      "aggregate_sha256": "ade27696608f837a8d6f191fa6c09d64d14754d69ff136a28de6a504ed66af52",
+      "bank_type": "source_story_variance",
+      "design_label": "gemma_2_2b/source_story_variance/shapesphysical_to_shapessocial",
+      "design_sha256": "ecbe3fe02af042216a5b595382bc06398cdf613392ac767477dc2c35230c6ea6",
+      "direction": "shapesphysical_to_shapessocial",
+      "model": "gemma_2_2b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_gemma_2_2b_source_story_variance_shapessocial_to_shapesphysical.json",
+      "aggregate_sha256": "524d85d41595981e0ea89f66dbabb5d498c1eda15ea558a9fa4a1db8fd46a8aa",
+      "bank_type": "source_story_variance",
+      "design_label": "gemma_2_2b/source_story_variance/shapessocial_to_shapesphysical",
+      "design_sha256": "ca2d326032be04e77af769f2766f9585051f074103f4211d6f090f5eb43f5fd7",
+      "direction": "shapessocial_to_shapesphysical",
+      "model": "gemma_2_2b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_llama_3_1_8b_source_story_correlation_pruned_shapesphysical_to_shapessocial.json",
+      "aggregate_sha256": "0179095b96e67b820294f5f638f4658fdd43cf5be6d5e8081bd75c1c6177d98c",
+      "bank_type": "source_story_correlation_pruned",
+      "design_label": "llama_3_1_8b/source_story_correlation_pruned/shapesphysical_to_shapessocial",
+      "design_sha256": "8b500766b109471778fbc2a0dac02b92d31cab2bc698e63cbd0a99e8785cc37e",
+      "direction": "shapesphysical_to_shapessocial",
+      "model": "llama_3_1_8b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_llama_3_1_8b_source_story_correlation_pruned_shapessocial_to_shapesphysical.json",
+      "aggregate_sha256": "881395de69962bfcf74b026586875a4ca37f5668ae87f26569d9aa60a0043005",
+      "bank_type": "source_story_correlation_pruned",
+      "design_label": "llama_3_1_8b/source_story_correlation_pruned/shapessocial_to_shapesphysical",
+      "design_sha256": "4bbfaacce1325201c86814373f4d587d2ca98d83b534c54842c2948bdeb06122",
+      "direction": "shapessocial_to_shapesphysical",
+      "model": "llama_3_1_8b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_llama_3_1_8b_source_story_variance_shapesphysical_to_shapessocial.json",
+      "aggregate_sha256": "d33f3961eb6479676d3332b2f93da1b9ed0d56ce5a590925b5bcb912b47c9bb2",
+      "bank_type": "source_story_variance",
+      "design_label": "llama_3_1_8b/source_story_variance/shapesphysical_to_shapessocial",
+      "design_sha256": "ad3f5be75dfa7d1cdd866b34f77ba6b4127f1118ab02c9c5e04e25eed4fbff76",
+      "direction": "shapesphysical_to_shapessocial",
+      "model": "llama_3_1_8b",
+      "shard_count": 32
+    },
+    {
+      "aggregate_file": "power_llama_3_1_8b_source_story_variance_shapessocial_to_shapesphysical.json",
+      "aggregate_sha256": "685787db78b4e3cb5ebdb75bf982428a3eaffcd0d26d21a9af0eab02788b29a2",
+      "bank_type": "source_story_variance",
+      "design_label": "llama_3_1_8b/source_story_variance/shapessocial_to_shapesphysical",
+      "design_sha256": "37a35e85999bdacb37a0278a73a755825fd3a1be0d38a283b4066c400096106c",
+      "direction": "shapessocial_to_shapesphysical",
+      "model": "llama_3_1_8b",
+      "shard_count": 32
+    }
+  ]
+}

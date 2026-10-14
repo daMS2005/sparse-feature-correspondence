@@ -1,0 +1,223 @@
+{
+  "file_count": 36,
+  "files": [
+    {
+      "path": "configs/analysis.yaml",
+      "role": "scientific_configuration",
+      "sha256": "b36370e71d8247dcb097d8f7808ca5e7278165c9af935b0856a4c68e33ebebb4",
+      "size_bytes": 9139
+    },
+    {
+      "path": "src/fmri_sae_correspondence/__init__.py",
+      "role": "shared_interface",
+      "sha256": "b6bfb28a146957c2c63be3201561522a7484956ee3acdf6b70481b87a764e914",
+      "size_bytes": 534
+    },
+    {
+      "path": "src/fmri_sae_correspondence/__main__.py",
+      "role": "shared_interface",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "size_bytes": 48
+    },
+    {
+      "path": "src/fmri_sae_correspondence/alignment.py",
+      "role": "shared_interface",
+      "sha256": "adc349762833f1192bf48eb197efcd9a11e76b36a863210ed13b150b4aff75c5",
+      "size_bytes": 8914
+    },
+    {
+      "path": "src/fmri_sae_correspondence/artifact_manifest.py",
+      "role": "scientific_stage",
+      "sha256": "efe26daf44a85b0c8c2f0860edff8e0e797f76a8aede3f52cd9a565e0c45c662",
+      "size_bytes": 83607
+    },
+    {
+      "path": "src/fmri_sae_correspondence/cli.py",
+      "role": "shared_interface",
+      "sha256": "db52dec5ed85e615d758280ac9e837ceabd816941ab591c0e8a437e03ae3ed9b",
+      "size_bytes": 2677
+    },
+    {
+      "path": "src/fmri_sae_correspondence/conditioning.py",
+      "role": "scientific_stage",
+      "sha256": "fa8e52375cb75acd3c7c638ab8a4442a5eb32fb641bb7f60f7d5d4442169bfc9",
+      "size_bytes": 34170
+    },
+    {
+      "path": "src/fmri_sae_correspondence/config.py",
+      "role": "shared_interface",
+      "sha256": "65d4f3fb11992828e0dbb43f5bd3c7ffc635fdf8d09343dc957cc53e8ec3fd8a",
+      "size_bytes": 11749
+    },
+    {
+      "path": "src/fmri_sae_correspondence/controls.py",
+      "role": "scientific_stage",
+      "sha256": "9b479e8191ccf3850a40ddd544bc24c5dfc00be8725e96f21588f2328cbc3f3a",
+      "size_bytes": 112571
+    },
+    {
+      "path": "src/fmri_sae_correspondence/extraction.py",
+      "role": "scientific_stage",
+      "sha256": "e75980fb1db8b186110934e64ba8e4abbeaf9d6c3595306247e6c8fb30d0e63f",
+      "size_bytes": 38842
+    },
+    {
+      "path": "src/fmri_sae_correspondence/feature_banks.py",
+      "role": "scientific_stage",
+      "sha256": "2d6c1dd8f9fb803757c50c4a47e85da18308c843591e9d290e3e4ac7f4022428",
+      "size_bytes": 44384
+    },
+    {
+      "path": "src/fmri_sae_correspondence/figures.py",
+      "role": "scientific_stage",
+      "sha256": "d45ce0db2fd9048537bcf6642a54a6c6efb082e9a95392f250f4d9b1d2e6ff29",
+      "size_bytes": 31176
+    },
+    {
+      "path": "src/fmri_sae_correspondence/fitting.py",
+      "role": "scientific_stage",
+      "sha256": "f580756973044fd26201862410d506e8a38f62a0613b2742598ace2dff06d0dd",
+      "size_bytes": 39439
+    },
+    {
+      "path": "src/fmri_sae_correspondence/group_average.py",
+      "role": "scientific_stage",
+      "sha256": "20448972bdc18dff36e886140cd1b37fcdfc23c2bd6e4c6f16ec904a81c6c003",
+      "size_bytes": 20399
+    },
+    {
+      "path": "src/fmri_sae_correspondence/group_average_manifest.py",
+      "role": "scientific_stage",
+      "sha256": "3d7f6549c33c36267c8cb96ce38f33ee59e9e05361b8efe75ef2a6bceec87051",
+      "size_bytes": 5926
+    },
+    {
+      "path": "src/fmri_sae_correspondence/grouped_reliance.py",
+      "role": "scientific_stage",
+      "sha256": "397220d05752380058a5ea95091bb115c082e00d429212e6d155d0a506166613",
+      "size_bytes": 25240
+    },
+    {
+      "path": "src/fmri_sae_correspondence/integrity.py",
+      "role": "shared_interface",
+      "sha256": "91933ccb791e7979abe8b0876a813bf340559e5dfda70475fc729d66213e5eeb",
+      "size_bytes": 11216
+    },
+    {
+      "path": "src/fmri_sae_correspondence/isc_reliability.py",
+      "role": "scientific_stage",
+      "sha256": "c0ec3f2178ea0d814ef1a161e00cf3b8757a51c556f8454c1bc1384fb7dfcd56",
+      "size_bytes": 33217
+    },
+    {
+      "path": "src/fmri_sae_correspondence/model_adapter.py",
+      "role": "shared_interface",
+      "sha256": "27e19588f8a8a5b6d2f66cfbead29af8c7f323189ddfb260af23430d8e08f0fe",
+      "size_bytes": 27439
+    },
+    {
+      "path": "src/fmri_sae_correspondence/modeling.py",
+      "role": "scientific_stage",
+      "sha256": "f44c2bec96a3097f291270b3db5a18344268c8f0160091ec423daf9838949548",
+      "size_bytes": 38891
+    },
+    {
+      "path": "src/fmri_sae_correspondence/nulls.py",
+      "role": "scientific_stage",
+      "sha256": "e6fbc397b2dcbffdcf8c8d824a70e507a216d649b0d98613def08c7c5a11599f",
+      "size_bytes": 50994
+    },
+    {
+      "path": "src/fmri_sae_correspondence/paths.py",
+      "role": "shared_interface",
+      "sha256": "e3b8e9fb8b988af0a110bf5b4cc4df67b6f8a2810297846a89ff1dcb537d412d",
+      "size_bytes": 4166
+    },
+    {
+      "path": "src/fmri_sae_correspondence/pooling.py",
+      "role": "scientific_stage",
+      "sha256": "da72773451c13594cf0124046718a2ce86bada26eadafbfb648acff494121ba2",
+      "size_bytes": 30881
+    },
+    {
+      "path": "src/fmri_sae_correspondence/pooling_analysis.py",
+      "role": "scientific_stage",
+      "sha256": "06b6bed6a14dad0f530be7dd759f973fc0be54919837c3fadaa6642971e83593",
+      "size_bytes": 78161
+    },
+    {
+      "path": "src/fmri_sae_correspondence/pooling_verification.py",
+      "role": "scientific_stage",
+      "sha256": "0b033d8ef5f0baa0e673e6dcfc4b6bf4269d8e9a81cca95eb66e49a6b7f4b808",
+      "size_bytes": 2351
+    },
+    {
+      "path": "src/fmri_sae_correspondence/power.py",
+      "role": "scientific_stage",
+      "sha256": "ebf2faf565531d89feb18707e9fc37e8018d0b3f8762d8038d9bb512b50c90cd",
+      "size_bytes": 93668
+    },
+    {
+      "path": "src/fmri_sae_correspondence/power_designs.py",
+      "role": "scientific_stage",
+      "sha256": "982697e5224eaa6165293eed705775f75685ca8e2f6b2f94f4776039e5651bfe",
+      "size_bytes": 25041
+    },
+    {
+      "path": "src/fmri_sae_correspondence/power_oracle.py",
+      "role": "scientific_stage",
+      "sha256": "e04d8e86de4f1636491cd8b6fa5817b5c7a8e4b360bd25a3de99c930d9738dcb",
+      "size_bytes": 25496
+    },
+    {
+      "path": "src/fmri_sae_correspondence/power_reporting.py",
+      "role": "scientific_stage",
+      "sha256": "8ca6edb4a91eaa06f90fdc30664627b163341b82c55a47bebfd49811d56545c9",
+      "size_bytes": 16283
+    },
+    {
+      "path": "src/fmri_sae_correspondence/power_validation.py",
+      "role": "scientific_stage",
+      "sha256": "edce2c30d9319820c50e775390da4916669084693196fc0c5a0430c12c5f8023",
+      "size_bytes": 5675
+    },
+    {
+      "path": "src/fmri_sae_correspondence/reliability.py",
+      "role": "scientific_stage",
+      "sha256": "8200b95dc0382313d52b6438d14b8d0890ae83d6634521b918f407b51c568f52",
+      "size_bytes": 4827
+    },
+    {
+      "path": "src/fmri_sae_correspondence/reliance_stability.py",
+      "role": "scientific_stage",
+      "sha256": "063b6da6f85ec52b951f8808bc3815b89eafc94588dec714ab135ef58c20a50b",
+      "size_bytes": 37844
+    },
+    {
+      "path": "src/fmri_sae_correspondence/sae_adapter.py",
+      "role": "scientific_stage",
+      "sha256": "24563161e8592e25b5e0ba19b310fe2b6b1cdb79d6107d6f65dff152b61a39f4",
+      "size_bytes": 6239
+    },
+    {
+      "path": "src/fmri_sae_correspondence/stability_derivation.py",
+      "role": "scientific_stage",
+      "sha256": "4ce060700335ccd826889f127a7e58cc7fa8f87fbafde13c258a4117c716373d",
+      "size_bytes": 17028
+    },
+    {
+      "path": "src/fmri_sae_correspondence/transfer.py",
+      "role": "scientific_stage",
+      "sha256": "df50dd0c254d55df6ec23d6f2561f1aa07a8b19b8768cc22a966f089b3f1fea6",
+      "size_bytes": 21758
+    },
+    {
+      "path": "src/fmri_sae_correspondence/verification.py",
+      "role": "scientific_stage",
+      "sha256": "94e96d30bbc1d0e271d8375820f6160189eba4999f851bfc87ccde17987d25a1",
+      "size_bytes": 22042
+    }
+  ],
+  "manifest_role": "scientific_source_integrity",
+  "schema_version": 2
+}

@@ -1,0 +1,268 @@
+schema_version: 2
+spec_id: fmri_sae_correspondence_v2
+status: documented_release
+
+# Every path is relative to an explicit runtime root. Inputs resolve below
+# FMRI_SAE_DATA_ROOT, generated files below FMRI_SAE_OUTPUT_ROOT, and reusable
+# model assets below FMRI_SAE_CACHE_ROOT. CLI values override these variables.
+paths:
+  artifact_root: artifacts
+  predictor_root: .
+  predictor_pattern: evaluation_blind/{model}/{story}_lm_controls.npz
+  random_bank_pattern: evaluation_blind/{model}/matched_random_banks.npz
+  historical_ranked_pattern: evaluation_blind/{model}/selected_features_n{size}.jsonl
+  transcript_root: transcripts
+  feature_bank_root: feature_banks
+  sae_root: sae_weights
+  sae_weight_pattern: sae_weights/{model}/layer_{layer}/params.npz
+  evidence_manifest: evidence_manifest.json
+
+models:
+  gemma_2_2b:
+    display_name: Gemma 2 2B
+    family: gemma
+    generation: gemma_2
+    model_id: google/gemma-2-2b
+    sae_release: gemma-scope-2b-pt-res-canonical
+    sae_width: width_16k
+    layers: [4, 8, 13, 17, 22, 25]
+  gemma_2_9b:
+    display_name: Gemma 2 9B
+    family: gemma
+    generation: gemma_2
+    model_id: google/gemma-2-9b
+    sae_release: gemma-scope-9b-pt-res-canonical
+    sae_width: width_16k
+    layers: [7, 13, 21, 27, 36, 40]
+  llama_3_1_8b:
+    display_name: Llama 3.1 8B
+    family: llama
+    generation: llama_3_1
+    model_id: meta-llama/Llama-3.1-8B
+    sae_release: llama_scope_lxr_8x
+    sae_width: 8x
+    layers: [5, 10, 16, 21, 27, 31]
+  gemma_3_1b:
+    display_name: Gemma 3 1B
+    family: gemma
+    generation: gemma_3
+    model_id: google/gemma-3-1b-pt
+    sae_release: gemma-scope-2-1b-pt-res-all
+    sae_width: width_16k
+    layers: [4, 8, 13, 17, 22, 25]
+  gemma_3_4b:
+    display_name: Gemma 3 4B
+    family: gemma
+    generation: gemma_3
+    model_id: google/gemma-3-4b-pt
+    sae_release: gemma-scope-2-4b-pt-res-all
+    sae_width: width_16k
+    layers: [5, 10, 17, 22, 29, 33]
+  gemma_3_12b:
+    display_name: Gemma 3 12B
+    family: gemma
+    generation: gemma_3
+    model_id: google/gemma-3-12b-pt
+    sae_release: gemma-scope-2-12b-pt-res-all
+    sae_width: width_16k
+    layers: [7, 15, 24, 31, 41, 47]
+
+model_sets:
+  confirmatory_core: [gemma_2_2b, gemma_2_9b, llama_3_1_8b]
+  replication_extension: [gemma_3_1b, gemma_3_4b, gemma_3_12b]
+  all_models: [gemma_2_2b, gemma_2_9b, llama_3_1_8b, gemma_3_1b, gemma_3_4b, gemma_3_12b]
+
+stories:
+  shapesphysical:
+    tr_seconds: 1.5
+    expected_trs: 303
+    expected_subjects: 59
+    brain_artifact_role: cleaned_participant_bold_full59
+    brain_bundle: brain_targets/shapesphysical_schaefer200_cleaned_full59_v2.npz
+  shapessocial:
+    tr_seconds: 1.5
+    expected_trs: 305
+    expected_subjects: 59
+    brain_artifact_role: cleaned_participant_bold_full59
+    brain_bundle: brain_targets/shapessocial_schaefer200_cleaned_full59.npz
+
+feature_bank:
+  primary:
+    source: source_story
+    aggregation: canonical_mean_positive_activation_per_tr
+    active_definition: positive_activation_greater_than_zero
+    minimum_active_trs: 5
+    maximum_active_fraction: 0.95
+    ranking: binary_temporal_variance
+    ranking_formula: p_times_one_minus_p
+    tie_breakers: [positive_activation_rms, feature_id]
+    equal_layer_allocation: true
+  banks:
+    - name: source_story_variance
+      role: primary
+      ranking: binary_temporal_variance
+    - name: source_story_prevalence
+      role: sensitivity
+      ranking: active_tr_prevalence
+    - name: source_story_correlation_pruned
+      role: grouped_reliance_sensitivity
+      base_bank: source_story_variance
+      clustering: complete_linkage
+      within_layer: true
+      thresholds: [0.70, 0.80, 0.90]
+    - name: historical_five_story_reciprocal_rank
+      role: historical_sensitivity
+      source: existing_evaluation_blind_bank
+  sizes: [64, 128, 256, 512, 1024]
+  primary_size: 256
+  nested_prefixes: true
+  source_stories_for_historical_bank: [alice, black, bronx, forgot, piemanpni]
+  evaluation_stories_excluded_from_historical_bank: [shapesphysical, shapessocial]
+  source_story_directions:
+    shapesphysical_to_shapessocial: shapesphysical
+    shapessocial_to_shapesphysical: shapessocial
+  prevalence_sensitivity: true
+  evaluation_outcomes_allowed: false
+  same_feature_layer_coordinates_for_paired_targets: true
+
+alignment:
+  token_timing_source: stimulus_timed_transcript
+  assignment: midpoint_of_word_start_end
+  pooling_rules: [mean_positive_activation, max_positive_activation, sum_positive_activation, event_count]
+  primary_pooling: mean_positive_activation
+  empty_tr_bin_value: 0.0
+  pre_story_padding: zero
+  all_pooling_sensitivity_requires: all_sae_token_records
+  all_pooling_sensitivity_fail_closed_if_missing: true
+
+targets:
+  brain:
+    type: participant_specific_cortical_bold
+    parcels: schaefer_200
+    lags: [0, 1, 2, 3, 4]
+    censor_flagged_responses_at_fit: true
+  lm:
+    type: tr_average_final_hidden_state
+    causal: true
+    maximum_context_tokens: 1024
+    add_special_tokens: false
+    pooling: mean_over_tokens_in_tr
+    lagged: false
+
+controls:
+  low_level: [word_count, phoneme_count, envelope_rms, envelope_delta]
+  position: story_position_ramp_bases
+  model_specific: [surprisal_mean, surprisal_sum]
+  dense: residual_stream_layer_means
+  multiband_blocks: [low_level_position, surprisal, sae]
+  matched_random_banks: true
+  matched_random_bank_count: 99
+  matched_random_bank_primary_size: 256
+  matched_random_bank_strata: [layer, active_fraction_decile, log_variance_decile]
+  matched_random_bank_seed: 20260825
+  band_ratios: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0]
+  band_random_search_candidates: 50
+  band_dirichlet_concentrations: [0.1, 1.0, 10.0]
+
+baselines:
+  low_level: [word_count, phoneme_count, envelope_rms, envelope_delta]
+  position_plateau_min_tr: 3
+  position_plateau_max_tr: 51
+  model_specific: [surprisal_mean, surprisal_sum]
+  multiband_blocks: [low_level_position, surprisal, sae]
+
+cross_validation:
+  outer_folds: 5
+  inner_folds: 5
+  split: contiguous
+  purge_adjacent_trs: 4
+  selection_metrics: [pearson_r, r2_oos]
+  primary_prediction_metric: pearson_r
+  primary_variance_metric: r2_oos
+  standardization: training_fold_only
+  participant_specific_brain: true
+  lm_temporal_folds: true
+  cross_story_transfer: true
+  cross_story_scaling: source_story_training_only
+  expected_matched_subjects: 59
+  alpha_grid: [0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, 10000000.0, 100000000.0, 1000000000.0, 10000000000.0]
+
+reliance:
+  primary: held_out_group_ablation_delta_r2_oos
+  feature_unit: conditional_single_feature
+  brain_ablation_unit: all_five_lag_columns_for_feature
+  lm_ablation_unit: one_unlagged_feature_column
+  ablation_replacement: training_mean_zero_after_standardization
+  aggregate_over: [target_dimensions, folds, participants]
+  correspondence_primary: spearman
+  correspondence_sensitivities: [pearson, top_12_5_percent_overlap, standardized_coefficient_energy]
+  grouped_reliance: discovery_defined_correlation_clusters
+
+nulls:
+  temporal_target:
+    type: circular_lm_target_shift
+    minimum_shift_trs: 10
+    shifts: 199
+    refit_penalty_selection: true
+    feature_bank_reselected: false
+  feature_identity:
+    permutations: 10000
+    constraint: within_layer
+    preserve_layer_composition: true
+  seeds:
+    primary: 20260827
+    temporal_target: 2026082701
+    feature_identity: 2026082702
+    bootstrap: 2026082703
+    power: 2026082704
+  bootstrap_draws: 10000
+  sign_flip_draws: 10000
+  multiple_comparison: benjamini_hochberg
+  alpha: 0.05
+
+power:
+  designs: [gemma_2_2b, llama_3_1_8b]
+  bank_types: [source_story_variance, source_story_correlation_pruned]
+  bank_size: 256
+  directions: [shapesphysical_to_shapessocial, shapessocial_to_shapesphysical]
+  oracle_correlations: [0.0, 0.2, 0.4, 0.6, 0.8]
+  residual_scale_multipliers: [0.25, 0.5, 1.0, 2.0]
+  null_replicates: 500
+  positive_replicates_per_grid_cell: 250
+  identifiability_power_threshold: 0.80
+  reference_oracle_correlation: 0.40
+  seed: 2026082704
+
+manuscript_gates:
+  positive_correspondence:
+    requires: [temporal_null_exceeded, identity_null_exceeded, both_transfer_directions, three_adjacent_bank_sizes_including_256, two_model_families, primary_and_secondary_bank]
+  redundancy_sensitive_correspondence:
+    requires: [grouped_reliance_exceeds_both_nulls]
+  identifiable_null:
+    requires: [conditional_and_grouped_null, stable_across_bank_size, stable_across_pooling, power_at_least_0.80_at_rho_0.40]
+  underidentified_measurement:
+    requires: [unstable_reliance_or_low_effective_rank_or_power_below_0.80]
+
+stage_modules:
+  reliability: reliability
+  banks: feature_banks
+  conditioning: conditioning
+  fit: fitting
+  transfer: transfer
+  nulls: nulls
+  grouped: grouped_reliance
+  pooling: pooling
+  pooling_analysis: pooling_analysis
+  controls: controls
+  power: power
+  figures: figures
+  artifacts: artifact_manifest
+  verification: verification
+
+verification:
+  reject_stale_cache: true
+  require_input_hashes: true
+  require_code_hashes: true
+  require_train_only_scaling: true
+  require_no_outcome_feature_selection: true
+  require_main_page_limit: 9

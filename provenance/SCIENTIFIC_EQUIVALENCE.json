@@ -1,0 +1,146 @@
+{
+  "artifact_type": "scientific_equivalence",
+  "artifacts": [
+    {
+      "artifact": "power_gemma_2_2b_source_story_correlation_pruned_shapesphysical_to_shapessocial.json",
+      "numerical_projection_after_sha256": "70036e97f8cf35ae21928ee71418b401230e0ac7b38bfcd1c4452c8600131909",
+      "numerical_projection_before_sha256": "70036e97f8cf35ae21928ee71418b401230e0ac7b38bfcd1c4452c8600131909",
+      "numerical_projection_equal": true,
+      "raw_sha256": "6e81c4f0a3942f3e01e90ad8e395a474834d3d27572f2d415fbe9235d0138f46",
+      "sanitized_sha256": "3d1f984bcf6262354a9d662436cb39712580fe0b73f2d4ae815db818bbcd40c6",
+      "scientific_projection_after_sha256": "3ebfa3859aeec97c4079e8967b293ed692f0ddec937aafbf5b8f5aded8b21c98",
+      "scientific_projection_before_sha256": "3ebfa3859aeec97c4079e8967b293ed692f0ddec937aafbf5b8f5aded8b21c98",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_gemma_2_2b_source_story_correlation_pruned_shapessocial_to_shapesphysical.json",
+      "numerical_projection_after_sha256": "97cec85abc0f23abbe64ce521de3944d76b80fbdba0167c4e10fa45e9b3eb925",
+      "numerical_projection_before_sha256": "97cec85abc0f23abbe64ce521de3944d76b80fbdba0167c4e10fa45e9b3eb925",
+      "numerical_projection_equal": true,
+      "raw_sha256": "7284f90573d3f15646bf19fe07afc8aec1742576be6c4bf696ed884c70868dc9",
+      "sanitized_sha256": "82215fb41c020960d2e4c957030f36ea23aa6bb322d32ea3b89e7124da4936c3",
+      "scientific_projection_after_sha256": "9370f4f231f273659a8017763a53a5e3ee926d392d451d45f096698c9abf3ce4",
+      "scientific_projection_before_sha256": "9370f4f231f273659a8017763a53a5e3ee926d392d451d45f096698c9abf3ce4",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_gemma_2_2b_source_story_variance_shapesphysical_to_shapessocial.json",
+      "numerical_projection_after_sha256": "4173ec41d560901f48460ed75ac832e8e0ac20abb72f3922c454f313f52ccccc",
+      "numerical_projection_before_sha256": "4173ec41d560901f48460ed75ac832e8e0ac20abb72f3922c454f313f52ccccc",
+      "numerical_projection_equal": true,
+      "raw_sha256": "44167fa8d2762d4800129db7d75b58e38f2cbb8e708cd7aac052f81ee651d205",
+      "sanitized_sha256": "ade27696608f837a8d6f191fa6c09d64d14754d69ff136a28de6a504ed66af52",
+      "scientific_projection_after_sha256": "5c385b6447fe5c598a5681388d2b654f405d33a1445d69efa4b1f215a35514a6",
+      "scientific_projection_before_sha256": "5c385b6447fe5c598a5681388d2b654f405d33a1445d69efa4b1f215a35514a6",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_gemma_2_2b_source_story_variance_shapessocial_to_shapesphysical.json",
+      "numerical_projection_after_sha256": "75dd130be7573ebbee9ab0b10e2a48c04e6876c12451513cc48fb259666d6f5a",
+      "numerical_projection_before_sha256": "75dd130be7573ebbee9ab0b10e2a48c04e6876c12451513cc48fb259666d6f5a",
+      "numerical_projection_equal": true,
+      "raw_sha256": "f284c9c8350e54509136a0ff546e5c60967c569530c9ea8ab18f6b9fd62b932c",
+      "sanitized_sha256": "524d85d41595981e0ea89f66dbabb5d498c1eda15ea558a9fa4a1db8fd46a8aa",
+      "scientific_projection_after_sha256": "fe007995bb82c4422a0256f9ef7319b05468e638f887afb942ceb32a17e62958",
+      "scientific_projection_before_sha256": "fe007995bb82c4422a0256f9ef7319b05468e638f887afb942ceb32a17e62958",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_llama_3_1_8b_source_story_correlation_pruned_shapesphysical_to_shapessocial.json",
+      "numerical_projection_after_sha256": "77147a1f6352d3c1f9fca60e1bc820062d1016aa5af03982b00258786282898f",
+      "numerical_projection_before_sha256": "77147a1f6352d3c1f9fca60e1bc820062d1016aa5af03982b00258786282898f",
+      "numerical_projection_equal": true,
+      "raw_sha256": "becbf97e7997eac031cc3d02c7eb04bd11d68a3066f8f5fa54d91af1caab54c8",
+      "sanitized_sha256": "0179095b96e67b820294f5f638f4658fdd43cf5be6d5e8081bd75c1c6177d98c",
+      "scientific_projection_after_sha256": "656e2d48a31e320f95380dbb3502c364637403e54c57ac748e5e61a0ce28df23",
+      "scientific_projection_before_sha256": "656e2d48a31e320f95380dbb3502c364637403e54c57ac748e5e61a0ce28df23",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_llama_3_1_8b_source_story_correlation_pruned_shapessocial_to_shapesphysical.json",
+      "numerical_projection_after_sha256": "02a531c94916ab289c961cfb48bd0e4293b6796bde1fa7ba34538a8e6145761f",
+      "numerical_projection_before_sha256": "02a531c94916ab289c961cfb48bd0e4293b6796bde1fa7ba34538a8e6145761f",
+      "numerical_projection_equal": true,
+      "raw_sha256": "1013699888cba64e9e34a769884705ced0076c2cea1021cfac2c96ac7544fd60",
+      "sanitized_sha256": "881395de69962bfcf74b026586875a4ca37f5668ae87f26569d9aa60a0043005",
+      "scientific_projection_after_sha256": "34208c2db7cb3ec44650536e719345cf90692c5364241affbb3e98b8b8d1bcc5",
+      "scientific_projection_before_sha256": "34208c2db7cb3ec44650536e719345cf90692c5364241affbb3e98b8b8d1bcc5",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_llama_3_1_8b_source_story_variance_shapesphysical_to_shapessocial.json",
+      "numerical_projection_after_sha256": "994de7160d2f9fea62f61e20242778a226d7b7f341659452ef839857920f97cb",
+      "numerical_projection_before_sha256": "994de7160d2f9fea62f61e20242778a226d7b7f341659452ef839857920f97cb",
+      "numerical_projection_equal": true,
+      "raw_sha256": "d7a5578d60ac4141f0e912c543fe444e7acc307617eb069cf62a6ddbe1334fe1",
+      "sanitized_sha256": "d33f3961eb6479676d3332b2f93da1b9ed0d56ce5a590925b5bcb912b47c9bb2",
+      "scientific_projection_after_sha256": "25d4ad03219f18e754bc5fc19e8b670007d55319a7f2d635903030b7e4bf8342",
+      "scientific_projection_before_sha256": "25d4ad03219f18e754bc5fc19e8b670007d55319a7f2d635903030b7e4bf8342",
+      "scientific_projection_equal": true
+    },
+    {
+      "artifact": "power_llama_3_1_8b_source_story_variance_shapessocial_to_shapesphysical.json",
+      "numerical_projection_after_sha256": "99ad6a8e08abc94dee32e2ff3fd330f4519376a80f602a13f429a00eff2974c8",
+      "numerical_projection_before_sha256": "99ad6a8e08abc94dee32e2ff3fd330f4519376a80f602a13f429a00eff2974c8",
+      "numerical_projection_equal": true,
+      "raw_sha256": "ab9194c9474992d8c018de9a4e9e7fa55c1f403a1d16671c0eb040a4f1e00b6c",
+      "sanitized_sha256": "685787db78b4e3cb5ebdb75bf982428a3eaffcd0d26d21a9af0eab02788b29a2",
+      "scientific_projection_after_sha256": "bdeb2bb39b2e66f3ac75ca642aa1eff922a8a5443e26ef6e5dd1e040feea04d8",
+      "scientific_projection_before_sha256": "bdeb2bb39b2e66f3ac75ca642aa1eff922a8a5443e26ef6e5dd1e040feea04d8",
+      "scientific_projection_equal": true
+    }
+  ],
+  "canonicalization": {
+    "encoding": "UTF-8 JSON",
+    "json_options": {
+      "allow_nan": false,
+      "ensure_ascii": true,
+      "separators": [
+        ",",
+        ":"
+      ],
+      "sort_keys": true
+    },
+    "numerical_projection": "Ordered JSON-pointer/value records for every numeric leaf; booleans are excluded.",
+    "scientific_projection": "Complete aggregate object excluding analysis_role, censoring_manifest, and shard_paths."
+  },
+  "configuration": {
+    "schema_v1_scientific_projection_sha256": "c6fed9e46c609654da607c2792a96598be2a1c20f16ddac4cb1ef366bc4bb943",
+    "schema_v2_scientific_projection_sha256": "c6fed9e46c609654da607c2792a96598be2a1c20f16ddac4cb1ef366bc4bb943",
+    "scientific_projection_equal": true
+  },
+  "reconstructed_aggregate": {
+    "all_shard_checksums_verified": true,
+    "artifact": "power_llama_3_1_8b_source_story_variance_shapessocial_to_shapesphysical.json",
+    "expected_original_raw_sha256": "ab9194c9474992d8c018de9a4e9e7fa55c1f403a1d16671c0eb040a4f1e00b6c",
+    "precanonicalization_sha256": "9efa0192e38c8bd185a3f51b4aad5dc17cea071cc803ddaa68b13b8d9ca213bb",
+    "path_independent_after_sha256": "7a92e28c0858c3d0e7bd2460c1c5ca5d9e6599e25971cbe85f223a02c3d9d7ff",
+    "path_independent_before_sha256": "7a92e28c0858c3d0e7bd2460c1c5ca5d9e6599e25971cbe85f223a02c3d9d7ff",
+    "path_independent_equal": true,
+    "reconstructed_raw_matches_expected": true,
+    "reconstructed_raw_sha256": "ab9194c9474992d8c018de9a4e9e7fa55c1f403a1d16671c0eb040a4f1e00b6c",
+    "shard_count": 32,
+    "simulation_or_model_fit_executed": false
+  },
+  "sanitization": {
+    "allowed_metadata_fields": [
+      "analysis_role",
+      "censoring_manifest",
+      "shard_paths"
+    ],
+    "analysis_role": "semi_synthetic_power",
+    "censoring_manifest_format": "external-data/brain_targets/<target_story>_schaefer200_cleaned.npz",
+    "shard_path_format": "shards/<aggregate-specific-shard-filename>"
+  },
+  "schema_version": 1,
+  "scope": "eight_completed_semi_synthetic_power_aggregates",
+  "verification": {
+    "all_numerical_projections_equal": true,
+    "all_scientific_projections_equal": true,
+    "artifact_count": 8,
+    "numerical_collection_after_sha256": "5e06477ab2bd8965eca902b468a11c2836fcd9c78a4d910b0e6f0a1ba0a95b15",
+    "numerical_collection_before_sha256": "5e06477ab2bd8965eca902b468a11c2836fcd9c78a4d910b0e6f0a1ba0a95b15",
+    "scientific_collection_after_sha256": "285750a45511995369f75aab1330b646a159d61d3534b62a4bed3b349af1a0ab",
+    "scientific_collection_before_sha256": "285750a45511995369f75aab1330b646a159d61d3534b62a4bed3b349af1a0ab"
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: Sparse Feature Correspondence Between Language Models and fMRI
+type: software
+version: 0.1.4
+date-released: 2026-09-04
+authors:
+  - family-names: Mora
+    given-names: Daniel
+repository-code: https://github.com/daMS2005/sparse-feature-correspondence
+license: MIT
+abstract: >-
+  Source code, analysis configuration, sanitized power aggregates, and
+  deterministic reports supporting an evaluation of sparse-feature
+  correspondence between language models and fMRI responses. Restricted
+  participant-level data and model assets are not redistributed.
+keywords:
+  - functional magnetic resonance imaging
+  - sparse autoencoders
+  - language models
+  - representational correspondence
+  - reproducibility
