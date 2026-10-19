@@ -25,7 +25,8 @@ for every run.
 
 ## Amendment, 2026-10-16
 
-Added before the control runs finished: the fallback is triggered only if the observed
+Added after the control runs had finished on the cluster, but before their output was
+examined: the fallback is triggered only if the observed
 agreement exceeds the 95th percentile of the LM-shifted distribution in at least two of the
 six runs. Per-run verdicts are still reported for every run.
 
