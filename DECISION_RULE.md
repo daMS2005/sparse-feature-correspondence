@@ -34,3 +34,8 @@ Disclosure: while testing the control script on 2026-10-15, partial control outp
 run, Gemma 2 2B Physical, was printed (16 of 100 LM-shifted, 8 of 100 white-noise and 2 of 100
 phase-randomized replicates). No other control output had been examined when this amendment
 was committed.
+
+## Note, 2026-10-19
+
+Figure 2 (importance expected from the predictor matrix alone) was made for all six runs after
+the control results had been seen, at the supervisor's request. The rule above had said to skip it.
