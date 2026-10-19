@@ -79,14 +79,17 @@ def fast_brain_alpha(x, y, groups):
 
 
 def shift_brain(targets, offset):
-    """np.roll each subject-run time series by the same offset."""
+    """np.roll each subject-run time series, and its censor mask with it, by the same offset."""
     values = targets.values.copy()
+    censor = None if targets.censor_mask is None else targets.censor_mask.copy()
     runs = np.char.add(np.char.add(targets.subject_ids, ":"), targets.run_ids)
     for run in np.unique(runs):
         rows = np.where(runs == run)[0]
         rows = rows[np.argsort(targets.tr_indices[rows], kind="stable")]
         values[rows] = np.roll(values[rows], offset, axis=0)
-    return replace(targets, values=values)
+        if censor is not None:
+            censor[rows] = np.roll(censor[rows], offset)
+    return replace(targets, values=values, censor_mask=censor)
 
 
 def phase_randomize(y, rng):
