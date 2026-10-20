@@ -1,0 +1,205 @@
+{
+ "runs": [
+  {
+   "run": "gemma_2_2b_shapesphysical_r4",
+   "observed": 0.9582568581615764,
+   "lm_shift": {
+    "p95": 0.9550410327375315,
+    "median": 0.9001912062678425,
+    "min": 0.6160415219836901,
+    "max": 0.9700088757955013,
+    "fraction_at_or_above_observed": 0.02
+   },
+   "brain_shift": {
+    "p95": 0.9538451395602628,
+    "median": 0.9245556672706865,
+    "min": 0.7918809205152232,
+    "max": 0.9589374160169173,
+    "fraction_at_or_above_observed": 0.01
+   },
+   "white_noise": {
+    "p95": 0.9594304678809522,
+    "median": 0.9454192574529997,
+    "min": 0.8221424615920325,
+    "max": 0.9613849130823552,
+    "fraction_at_or_above_observed": 0.09
+   },
+   "phase": {
+    "p95": 0.9565873599567605,
+    "median": 0.8992341871713202,
+    "min": 0.6253067186470767,
+    "max": 0.9761495484925592,
+    "fraction_at_or_above_observed": 0.04
+   },
+   "exceeds_lm_shift_p95": true
+  },
+  {
+   "run": "gemma_2_9b_shapesphysical_r5",
+   "observed": 0.9373544504263974,
+   "lm_shift": {
+    "p95": 0.9619598161413744,
+    "median": 0.9307439351909471,
+    "min": 0.6193551196865817,
+    "max": 0.9694544235896783,
+    "fraction_at_or_above_observed": 0.38
+   },
+   "brain_shift": {
+    "p95": 0.955701888505506,
+    "median": 0.9239613665530015,
+    "min": 0.8318612319304884,
+    "max": 0.9687113317461113,
+    "fraction_at_or_above_observed": 0.28
+   },
+   "white_noise": {
+    "p95": 0.9668900560246355,
+    "median": 0.9470637303058062,
+    "min": 0.7839505364082477,
+    "max": 0.9690998210305845,
+    "fraction_at_or_above_observed": 0.57
+   },
+   "phase": {
+    "p95": 0.9611934775369455,
+    "median": 0.9280873105235045,
+    "min": 0.6364169389426334,
+    "max": 0.9782004326648868,
+    "fraction_at_or_above_observed": 0.39
+   },
+   "exceeds_lm_shift_p95": false
+  },
+  {
+   "run": "llama_3_1_8b_shapesphysical_r4",
+   "observed": 0.9460712177941604,
+   "lm_shift": {
+    "p95": 0.9822760465603863,
+    "median": 0.9043836247063188,
+    "min": 0.7201292684245574,
+    "max": 0.9934710700320867,
+    "fraction_at_or_above_observed": 0.21
+   },
+   "brain_shift": {
+    "p95": 0.9723579747730711,
+    "median": 0.9473305752989561,
+    "min": 0.8665008699338106,
+    "max": 0.9759412865136585,
+    "fraction_at_or_above_observed": 0.52
+   },
+   "white_noise": {
+    "p95": 0.9568726014683921,
+    "median": 0.9478419623059833,
+    "min": 0.8861619174434872,
+    "max": 0.9603345835650547,
+    "fraction_at_or_above_observed": 0.54
+   },
+   "phase": {
+    "p95": 0.975225743878786,
+    "median": 0.8924597164910998,
+    "min": 0.7504509735760994,
+    "max": 0.98056054547317,
+    "fraction_at_or_above_observed": 0.12
+   },
+   "exceeds_lm_shift_p95": false
+  },
+  {
+   "run": "gemma_2_2b_shapessocial_r4",
+   "observed": 0.9856092484289681,
+   "lm_shift": {
+    "p95": 0.9970795530821331,
+    "median": 0.98259221241386,
+    "min": 0.8936382711121436,
+    "max": 0.9974112133830565,
+    "fraction_at_or_above_observed": 0.4
+   },
+   "brain_shift": {
+    "p95": 0.9901731096183459,
+    "median": 0.9842961739272975,
+    "min": 0.9445073099565163,
+    "max": 0.9923587786070203,
+    "fraction_at_or_above_observed": 0.41
+   },
+   "white_noise": {
+    "p95": 0.9964587187991221,
+    "median": 0.9917539197169443,
+    "min": 0.9695718609633954,
+    "max": 0.9967622625156504,
+    "fraction_at_or_above_observed": 0.54
+   },
+   "phase": {
+    "p95": 0.9962899416160208,
+    "median": 0.9867081843519767,
+    "min": 0.8593232976260956,
+    "max": 0.997948959580973,
+    "fraction_at_or_above_observed": 0.52
+   },
+   "exceeds_lm_shift_p95": false
+  },
+  {
+   "run": "gemma_2_9b_shapessocial_r5",
+   "observed": 0.9741076070682215,
+   "lm_shift": {
+    "p95": 0.9549614645433508,
+    "median": 0.8850221219155927,
+    "min": 0.48821666684325793,
+    "max": 0.9584176877190581,
+    "fraction_at_or_above_observed": 0.0
+   },
+   "brain_shift": {
+    "p95": 0.9261186206833576,
+    "median": 0.8307734652731065,
+    "min": 0.6757130742450558,
+    "max": 0.9575021203467228,
+    "fraction_at_or_above_observed": 0.0
+   },
+   "white_noise": {
+    "p95": 0.944980053929117,
+    "median": 0.9395071400397889,
+    "min": 0.6717737071472926,
+    "max": 0.9468958739488895,
+    "fraction_at_or_above_observed": 0.0
+   },
+   "phase": {
+    "p95": 0.958898256775346,
+    "median": 0.9078932218470503,
+    "min": 0.5751641224872466,
+    "max": 0.9703816813027544,
+    "fraction_at_or_above_observed": 0.0
+   },
+   "exceeds_lm_shift_p95": true
+  },
+  {
+   "run": "llama_3_1_8b_shapessocial_r4",
+   "observed": 0.9545163461103655,
+   "lm_shift": {
+    "p95": 0.9849361968862642,
+    "median": 0.9623866592690815,
+    "min": 0.757373555721351,
+    "max": 0.9899598749514559,
+    "fraction_at_or_above_observed": 0.62
+   },
+   "brain_shift": {
+    "p95": 0.9622005490796953,
+    "median": 0.9227885326055586,
+    "min": 0.8510806965974652,
+    "max": 0.9710472935871944,
+    "fraction_at_or_above_observed": 0.09
+   },
+   "white_noise": {
+    "p95": 0.9836461922514081,
+    "median": 0.9748313453863631,
+    "min": 0.8976840747387512,
+    "max": 0.9850615257697138,
+    "fraction_at_or_above_observed": 0.7
+   },
+   "phase": {
+    "p95": 0.9837263946374261,
+    "median": 0.9635262898818145,
+    "min": 0.8056986127364384,
+    "max": 0.9882385604041869,
+    "fraction_at_or_above_observed": 0.67
+   },
+   "exceeds_lm_shift_p95": false
+  }
+ ],
+ "runs_exceeding": 2,
+ "fallback_triggered": true,
+ "rule": "fallback if observed > 95th percentile of LM-shifted distribution in >= 2 of 6 runs"
+}
